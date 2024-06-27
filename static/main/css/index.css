@@ -1,31 +1,65 @@
 body {
-    background: #000000;
+    background: #212529;
     display: flex;
 }
-
+ /**/
+ /**/
+ /*асайд сторона*/
 aside {
-    background: rgba(31, 55, 55, 0.66);
+    background: #343A40;
     height: 100vh;
     width: 15vw;
     position: fixed;
 
 }
 .sidebar-elements {
+    margin-top: 10px;
+    font-size: 30px;
     text-decoration: none;
     color: white;
     display: block;
     cursor: pointer;
     height: 40px;
     transition: all .3s;
+
+}
+.logo{
+    font-family: "Danfo", serif;
+    text-decoration: none;
+    font-size: 30px;
+
+    cursor: default;
+    display: block;
+    color: #343A40;
+    position: relative;
+    z-index: 0;
+    margin-top: 60px;
+    margin-left: 40px;
+
+}
+.img-logo{
+    height: 150px;
+    display: block;
+    position: absolute;
+    left: -1px;
 }
 aside ul{
+    display: block;
+    margin-top: 70px;
+    margin-left: 10px;
     list-style-type: none
 }
 .sidebar-elements:hover{
     color: red;
-    font-size: 20px;
+
 
 }
+.sidebar-elements:active {
+    font-size: 25px;
+}
+/*aside side end*/
+/**/
+/**/
 main .features{
     float: left;
     color: white;
@@ -33,8 +67,8 @@ main .features{
     margin-left: 17vw;
     margin-top: 30px;
     padding: 10px 15px;
-
-    background: rgba(31, 55, 55, 0.66);
+    border-radius: 8px;
+    background: #55595C;
     height: 1000px;
 }
 main .features h1 {
@@ -43,6 +77,48 @@ main .features h1 {
 main p {
     display: block;
     color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Создает три колонки равного размера */
+    grid-gap: 10px;
+    /*rotate: 357deg;*/
+    /* Расстояние между колонками и строками */
+
+}
+.container .news {
+    border-radius: 8px;
+    border: 2px solid white;
+    padding: 20px; /* Отступы для внутреннего содержимого */
+     /* Цвет фона для наглядности */
+    text-align: center; /* Выравнивание текста по центру */
+    display: block;
+    position: relative;
+    transition: all .2s;
+}
+.news_date{
+    margin: 10px;
+    position: absolute;
+    color: #8f9895;
+    bottom: 0;
+    right: 0;
+
+}
+.news:hover{
+    border-radius:8px;
+    border-color: red;
+}
+.text-form{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 97%;
+
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
 }
 
 

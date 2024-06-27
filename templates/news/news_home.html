@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+    Новости
+{% endblock %}
+{% block content %}
+    <div class="features">
+    {% if news %}
+        <h1>Новости</h1>
+{#        <p>{{ news }}</p>#}
+        <div class="container">
+                {% for article in news %}
+                    <div class="news">
+                        <h2>{{ article.title }}</h2>
+                        <p>{{ article.content }}</p>
+                        <div class="news_date">{{ article.date }}</div>
+                    </div>
+                {% endfor %}
+    {% else %}
+            <h1>У вас нет записей</h1>
+            
+        </div>
+    {% endif %}
+        
+        
+
+
+
+    </div>
+
+
+{% endblock %}
